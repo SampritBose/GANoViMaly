@@ -1,0 +1,6 @@
+torch>=2.1
+opencv-python>=4.8
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.3
+\n# Vision Mamba selective state-space kernels (supported Linux/CUDA/PyTorch setups)\nmamba-ssm>=2.2.2\n
