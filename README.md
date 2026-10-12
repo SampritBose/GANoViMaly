@@ -15,7 +15,7 @@ Video anomaly detection emphasizes on recognizing unusual activities in video se
 
 GANoViMaly integrates spatiotemporal attention, Vision Mamba-based future-frame prediction, and a 1×1 PatchGAN discriminator to identify anomalous activities in video sequences.
 
-![GANoViMaly Architecture](figures/ganovimaly_architecture.png)
+![GANoViMaly Architecture](Figures/block%20diag.jpg)
 
 *Figure 1. Overall architecture of the proposed GANoViMaly framework.*
 
@@ -47,56 +47,18 @@ The discriminator is trained using a least-squares adversarial objective to dist
 
 ## 4. Results
 
-GANoViMaly is evaluated on five benchmark datasets: UCSD Ped1, UCSD Ped2, CUHK Avenue, ShanghaiTech, and UCF-Crime.
+GANoViMaly is evaluated on four benchmark datasets: UCSD Ped1, UCSD Ped2, CUHK Avenue, and ShanghaiTech.
 
 The framework predicts future frames and identifies anomalies through deviations between predicted and actual frames. Prediction errors can be visualized as anomaly heatmaps, while regularity score curves illustrate changes in normality across video frames.
 
-![GANoViMaly Anomaly Detection Results](figures/ganovimaly_results.png)
+![GANoViMaly Results](Figures/Results%20Graphs.jpg)
 
-*Figure 2. Qualitative anomaly detection results, including predicted frames and anomaly heatmaps.*
+*Figure 2. Regularity score curves on testing videos of (a) UCSD Ped1, (b) UCSD Ped2, (c) CUHK Avenue and (d) Shanghai Tech datasets*
 
-## 5. Performance
-
-### AUC Comparison
-
-| Dataset | AUC (%) |
-|---|---:|
-| UCSD Ped1 | 95.3 |
-| UCSD Ped2 | 98.3 |
-| CUHK Avenue | 91.4 |
-| ShanghaiTech | 87.2 |
-| UCF-Crime | 85.3 |
-
-### Computational Efficiency
-
-![GANoViMaly Performance Comparison](figures/ganovimaly_performance.png)
-
-*Table 1. Computational-time comparison and detection performance, as reported in the paper.*
-
-The reported inference times on an NVIDIA A100 GPU are:
-
-| Dataset | Runtime (seconds/frame) | Approx. FPS |
-|---|---:|---:|
-| UCSD Ped1 | 0.025 | 40 |
-| UCSD Ped2 | 0.027 | 37 |
-| CUHK Avenue | 0.030 | 33 |
-| ShanghaiTech | 0.034 | 29 |
-| **Average** | **0.029** | **34** |
-
-Runtime comparisons with other methods should be interpreted cautiously because the original studies used different hardware, input settings, and evaluation datasets.
 
 ## 6. Citation
 
-If you use this work in your research, please cite the paper:
 
-```bibtex
-@article{bose2026ganovimaly,
-  title   = {GANoViMaly: A Video Anomaly Detection Framework using Vision Mamba based Generative Adversarial Network},
-  author  = {Bose, Samprit and Kolekar, Maheshkumar H.},
-  journal = {IEEE Transactions on Artificial Intelligence},
-  year    = {2026},
-  note    = {Accepted for publication}
-}
 ```
 
 The DOI and final publication details can be added once they are available.
