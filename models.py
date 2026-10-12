@@ -1,14 +1,3 @@
-"""GANoViMaly architecture following the paper's described components.
-
-Components: local spatiotemporal attention + 3D convolutional patch embedding,
-linear token projection + positional/class tokens, bidirectional selective SSM
-(Vision-Mamba-style) blocks with forward/backward paths, gating and residuals,
-next-frame decoder, and a 1x1 PatchGAN discriminator.
-
-The paper does not publish a complete implementation or every layer dimension.
-This implementation follows the described topology, but should not be claimed
-as a bit-for-bit reproduction of the authors' undisclosed code.
-"""
 import torch
 from torch import nn
 import torch.nn.functional as F
