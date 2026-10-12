@@ -1,4 +1,4 @@
-# GANoViMaly: Video Anomaly Detection
+# GANoViMaly for Video Anomaly Detection 
 
 PyTorch reference implementation inspired by the uploaded paper, **GANoViMaly: A Video Anomaly Detection Framework using Vision Mamba based Generative Adversarial Network**.
 
