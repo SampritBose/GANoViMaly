@@ -1,4 +1,3 @@
-"""Configuration for the paper-inspired GANoViMaly implementation."""
 from dataclasses import dataclass
 
 @dataclass
